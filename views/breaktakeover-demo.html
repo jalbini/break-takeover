@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Break Takeover Demo</title>
+
+        <meta name="root" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="stylesheets/animate.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/btdemo.css" rel="stylesheet" />
+
+        <script src="js/nunchuck.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="/js/qrcode.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/btdemo.js"></script>
+
+
+    </head>
+
+    <body>
+        <div class="page-wrap">
+            <section id='background' class='layer' >
+                <img class='background-image' id="bg-intro" src="assets/breaktakeover-background.jpg">            
+            </section>
+
+            <section id='main-content' class='layer'>
+                <video class='video-player' id="player" src="assets/chipotle.mp4"></video>
+                <div id='qr-code'></div>
+            </section>
+
+            <section id='video-content' class='layer'>
+                <video class='video-player' id="content-player" src="assets/newgirl.mp4" controls></video>
+            </section>
+
+            <section id='click-to-play-overlay' class='layer' onclick="clickToPlay();">
+
+            </section>
+        </div>
+    </body>
+</html>

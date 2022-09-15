@@ -1,0 +1,399 @@
+@font-face {
+  font-family: "Antenna-Medium";
+  src: url("/assets/Antenna-Medium.otf");
+}
+
+@font-face {
+  font-family: "Antenna-Black";
+  src: url("/assets/Antenna-Black.otf");
+}
+
+@font-face {
+  font-family: "Antenna-Bold";
+  src: url("/assets/Antenna-Bold.otf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body,html {
+	height: 100%;
+	width: 100%;
+  font-family: "Antenna-Bold", sans-serif;
+  color: #ffffff;
+
+  background-color: black;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.light {
+  font-family: "Antenna-Medium";
+}
+
+.heavy {
+  font-family: "Antenna-Black";
+}
+
+
+.page-wrap {
+  position: absolute;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+
+  transform-origin: 0% 0% 0;
+}
+
+section.layer {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+#background {
+  z-index: 1;
+}
+
+#background .background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#main-content {
+  z-index: 2;
+}
+
+#main-content #splash #instructions {
+  font-size: 28px;
+  /*font-weight: 500;*/
+
+  position: absolute;
+  top: 53px;
+  left: 471px;
+}
+
+#main-content #splash .title {
+  font-size: 86px;
+
+  position: absolute;
+  top: 261px;
+  left: 434px;
+}
+
+#main-content #splash .subtitle {
+  font-size: 34px;
+
+  position: absolute;
+  top: 383px;
+  left: 434px;
+}
+
+#main-content #quiz #bounty {
+  width: 164px;
+  height: 54px;
+
+  background-color: #e16e43;
+  border: solid 1px #dedede;
+
+  position: absolute;
+  top: 27px;
+  left: 755px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 26px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+#main-content #quiz #question-area {
+  width: 798px;
+  height: 475px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  border: solid 1px #bcbcbc;
+
+  position: absolute;
+  top: 67px;
+  left: 438px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 26px;
+}
+
+#main-content #quiz #question-text{
+  margin-bottom: 30px;
+}
+
+#main-content #quiz .answer{
+  width: 660px;
+  height: 83px;
+
+  background-color: rgba(255, 255, 255, 0.16);
+  border: solid 2px #ffffff;
+  margin: 10px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+}
+
+#main-content #quiz .answer.correct{
+  background-color: #53d88b;
+}
+
+#main-content #quiz .answer.wrong{
+  background-color: #d97878;
+}
+
+#main-content #quiz .answer .answer-label{
+  position: absolute;
+  left: 36px;
+
+  font-size: 36px;
+}
+
+#main-content #quiz .answer .answer-text{
+  font-size: 28px;
+  /*font-weight: 500;*/
+}
+
+#main-content #result #winner-text{
+  font-size: 64px;
+
+  position: absolute;
+  top: 234px;
+  left: 537px;
+
+  width: 641px;
+  height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*font-weight: 500;*/
+}
+
+#main-content #result #winner-score{
+  position: absolute;
+  top: 361px;
+  left: 763px;
+
+  width: 150px;
+  height: 93px;
+
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.27);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 50px;
+  color: #d85834;
+}
+
+
+
+#footer {
+  height: 126px;
+  top: 594px;
+  z-index: 3;
+
+  background-image: url("/assets/quiz/footer-bg.png");
+
+}
+
+#footer .left {
+  width: 920px;
+  height: 115px;
+
+  position: absolute;
+  left: 0px;
+  top: 11px;
+}
+
+#footer .left #user-lobby {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 100%;
+}
+
+
+#footer .left #user-lobby .user-lobby-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 41px;
+
+  font-size: 28px;
+  color: #e16e42;
+}
+
+#footer .left #user-lobby .user-lobby-status .checkbox {
+  width: 41px;
+  height: 41px;
+  background: url("/assets/quiz/checkbox-bg.jpg");
+}
+
+#footer .left #user-lobby .user-lobby-status.ready .checkbox {
+  background: url("/assets/quiz/checkbox-bg.jpg") -41px 0;
+}
+
+
+#footer .left #user-lobby .user-lobby-status .username {
+  margin-left: 10px;
+}
+
+
+
+#footer .left #user-scores {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+
+  height: 160px;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0px;
+}
+
+#footer .left #user-scores .user-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer .left #user-scores .user-score.faded {
+  opacity: 0.4;
+}
+
+#footer .left #user-scores .user-score .score {
+  width: 150px;
+  height: 93px;
+
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.27);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 50px;
+  color: #d85834;
+}
+
+#footer .left #user-scores .user-score .username {
+  margin-top: 10px;
+
+  font-size: 28px;
+  color: #e16e42;
+}
+
+
+
+
+#footer .right {
+  width: 360px;
+  height: 114px;
+
+  position: absolute;
+  right: 0px;
+  top: 12px;
+
+  font-size: 26px;
+
+  overflow: hidden;
+}
+
+#footer .right #background-shape {
+  position: absolute;
+  width: 360px;
+  height: 114px;
+
+  background-color: #e16e43;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+
+  transform-origin: 0% 100% 0;
+  transform: skew(-20deg);
+}
+
+#footer .right #background-shape.correct {
+  background-color: #53d88b;
+}
+
+#footer .right #background-shape.wrong {
+  background-color: #d97878;
+}
+
+#footer .right #status-area {
+  width: 320px;
+  height: 114px;
+
+  position: absolute;
+  right: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .right #status-area #status-text{
+  font-size: 26px;
+}
+
+#footer .right #status-area #countdown {
+  font-size: 70px;
+
+  margin-left: 20px;
+}
+
+
+
+/*.questionContainer {
+  x: 438px;
+  y: 69px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  width: 798px;
+  height: 475px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+*/
+/*.footer {
+    position: absolute;
+    bottom: 0; top: auto;
+    width: 100%;
+    height: 120px;
+    border: 2px solid yellow;
+}*/
